@@ -1,0 +1,20 @@
+class Solution:
+    def romanToInt(self, s: str) -> int:
+        Roman = list(map(str,map(ord,s)))
+        sum = 0
+        print(Roman[0])
+        
+        for i in enumerate(Roman):
+            if Roman[i] == 67 and Roman[i] != 77 and Roman[i] != 68:
+                sum =+ 100
+            else:
+                sum =-100
+
+        return sum
+
+
+
+
+
+sol = Solution.romanToInt(0,"CD")
+print(sol)
